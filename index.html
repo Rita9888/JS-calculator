@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel = "stylesheet" href = "style.css">
+    <title>Калькулятор</title>
+</head>
+<body>
+    <form name = "calculator" id = "calc">
+        <table>
+            <tr>
+                <td>
+                    <input type = "text" name = "input" size = 18 class = "display">
+                </td>
+            </tr>
+            <tr>
+                <td id = "buttons">
+                    <input type = "button" name = "dote" value = "," OnClick="calc.input.value += '.'">
+                    <input type = "button" name = "sin" value = "sin" Onclick = "calc.input.value += 'sin '">
+                    <input type = "button" name = "cos" value = "cos" Onclick = "calc.input.value += 'cos '">
+                    <input type = "button" name = "tg" value = "tg" Onclick = "calc.input.value += 'tg '">
+                    <input type = "button" name = "ctg" value = "ctg" Onclick = "calc.input.value += 'ctg '">
+                    <br>
+                    <input type = "button" name = "one" value = "1" class = "numb" OnClick="calc.input.value += '1'">
+                    <input type = "button" name = "two" value = "2" class = "numb" OnClick="calc.input.value += '2'">
+                    <input type = "button" name = "three" value = "3" class = "numb" OnClick="calc.input.value += '3'">
+                    <input type = "button" name = "plus" value = "+" OnClick="calc.input.value += ' + '">
+                    <input type = "button" name = "units" value = "рад" Onclick = "Units()">
+                    
+                    <br>
+                    <input type = "button" name = "four" value = "4" class = "numb" OnClick="calc.input.value += '4'">
+                    <input type = "button" name = "five" value = "5" class = "numb" OnClick="calc.input.value += '5'">
+                    <input type = "button" name = "six" value = "6" class = "numb" OnClick="calc.input.value += '6'">
+                    <input type = "button" name = "minus" value = "-" OnClick="calc.input.value += ' - '">
+                    <input type = "button" name = "fact" value = "!" Onclick = "calc.input.value += '!'">
+                    <br>
+                    <input type = "button" name = "seven" value = "7" class = "numb" OnClick="calc.input.value += '7'">
+                    <input type = "button" name = "eight" value = "8" class = "numb" OnClick="calc.input.value += '8'">
+                    <input type = "button" name = "nine" value = "9" class = "numb" OnClick="calc.input.value += '9'">
+                    <input type = "button" name = "mul" value = "*" OnClick="calc.input.value += ' * '">
+                    <input type = "button" name = "pow" value = "^" OnClick="calc.input.value += '**'">
+                    <br>
+                    <input type = "button" name = "clear" value = "c" OnClick="calc.input.value = ''">
+                    <input type = "button" name = "zero" value = "0" class = "numb" OnClick="calc.input.value += '0'">
+                    <input type = "button" name = "doit" value = "=" OnClick="Result()">
+                    <input type = "button" name = "div" value = "/" OnClick="calc.input.value += ' / '">
+                    <input type = "button" name = "divBalans" value = "%" OnClick="calc.input.value += '%'">
+                </td>
+            </tr>
+        </table>
+    </form>
+        <button class = "history">history</button>
+        <div id = "arhiv"></div>
+
+    <script src = "./script.js"></script>
+</body>
+</html>

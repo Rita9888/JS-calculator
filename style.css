@@ -1,0 +1,59 @@
+form{
+	display : flex;
+	justify-content: center;
+	align-items: center;
+}
+
+table{
+	background: #1f1f1f;
+}
+#calculator * {
+	font-size: 20px;
+}
+
+
+input.display {
+	width: 411px; 
+	height: 40px;
+	text-align: right;
+	font-size: 27px;
+	background: #1f1f1f;
+	color: #fff;
+}
+
+input[type= button] {
+	width: 80px;
+	height: 40px;
+	font-size: 16px;
+	background: #131313;
+	color: #fff;
+}
+
+input[type= button]:hover{
+	color: #ff8a0a;
+}
+
+.numb{
+	background-color: #060606 !important;
+}
+
+
+.history{
+	width: 80px;
+	height: 40px;
+	font-size: 16px;
+	background: #131313;
+	color: #fff;
+}
+
+.history:hover{
+	color: #ff8a0a;
+}
+
+#arhiv{
+	background-color: #E5E8E8;
+	visibility: hidden;
+	max-width: 100%;
+	min-height: 200px;
+	font-size: 18px;
+}
