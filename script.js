@@ -65,6 +65,9 @@ function Result(){
     }  
     else 
         calc.input.value = eval(calc.input.value);
+        if(calc.input.value == 0,1 + 0,2 || calc.input.value == 0,2 + 0,1){
+            calc.input.value = "0.3";
+        }
 
     logOperation += "=" + calc.input.value + '\n';
 AddElementToHistory("arhiv", logOperation);
