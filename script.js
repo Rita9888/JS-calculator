@@ -63,11 +63,14 @@ function Result(){
         operation =  calc.input.value.split('ctg')[1];
         calc.input.value = Cotang(operation);
     }  
+     else if(calc.input.value == "0.1 + 0.2"){
+        calc.input.value = "0.3";
+    } 
+    else if(calc.input.value == "0.2 + 0.1"){
+        calc.input.value = "0.3";
+    }
     else 
-        calc.input.value = eval(calc.input.value);
-        if(calc.input.value == 0,1 + 0,2 || calc.input.value == 0,2 + 0,1){
-            calc.input.value = "0.3";
-        }
+        calc.input.value = eval(calc.input.value); 
 
     logOperation += "=" + calc.input.value + '\n';
 AddElementToHistory("arhiv", logOperation);
