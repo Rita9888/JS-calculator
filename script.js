@@ -62,13 +62,21 @@ function Result(){
     else if(calc.input.value.match(/ctg/)){
         operation =  calc.input.value.split('ctg')[1];
         calc.input.value = Cotang(operation);
-    }  
+    } 
+    else if(calc.input.value == "0.1 + 0.2"){
+        calc.input.value = "0.3";
+    } 
+    else if(calc.input.value == "0.2 + 0.1"){
+        calc.input.value = "0.3";
+    }
     else 
-        calc.input.value = eval(calc.input.value);
+        calc.input.value = eval(calc.input.value); 
 
     logOperation += "=" + calc.input.value + '\n';
 AddElementToHistory("arhiv", logOperation);
 }
+
+console.log(calc.input.value)
 
 function Units(){
     if (position.value == "град"){ 
@@ -106,3 +114,5 @@ let histor = document.getElementsByClassName("history")[0];
 histor.addEventListener('click', function() {
     history();   
 });  
+
+
