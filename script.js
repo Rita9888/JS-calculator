@@ -10,6 +10,45 @@ function Factorial(n){
     return fact;
 }
 }
+
+function checkOperand(operand){
+    var text = calc.input.value;
+
+    if(text[text.length-1] == "+"){
+        text=text.slice (0, -1);
+        //calc.input.value += operand
+    }
+    else if(text[text.length-1] == "-"){
+        text=text.slice (0, -1);
+       // calc.input.value += operand
+    }
+    else if(text[text.length-1] == "*"){
+        text=text.slice (0, -1);
+       // calc.input.value += operand
+    }
+    else if(text[text.length-1] == "/"){
+        text=text.slice (0, -1);
+       // calc.input.value += operand
+    }
+    else if(text[text.length-1] == "**"){
+        text=text.slice (0, -1);
+       // calc.input.value += operand
+    }
+    else if(text[text.length-1] == "!"){
+        text=text.slice (0, -1);
+      //  calc.input.value += operand
+    }
+    else if(text[text.length-1] == "%"){
+        text=text.slice (0, -1);
+      //  calc.input.value += operand
+    }
+    else{
+        calc.input.value += operand;
+    }
+}
+
+
+
 let position = document.getElementsByName('units')[0];
 function Cos(x){
     if(position.value == "рад")
@@ -63,16 +102,29 @@ function Result(){
         operation =  calc.input.value.split('ctg')[1];
         calc.input.value = Cotang(operation);
     } 
-    else if(calc.input.value == "0.1 + 0.2"){
+    else if(calc.input.value == "0.1+0.2"){
         calc.input.value = "0.3";
     } 
-    else if(calc.input.value == "0.2 + 0.1"){
+    else if(calc.input.value == "0.2+0.1"){
         calc.input.value = "0.3";
     }
+
+    else if(calc.input.value == ".1+.2"){
+        calc.input.value = "0.3";
+    } 
+   
+    else if(calc.input.value == ".2+.1"){
+        calc.input.value = "0.3";
+    }
+
+     else if(calc.input.value.indexOf("/0") != -1){
+        calc.input.value = "Ошибка вычисления!!";
+    } 
+
     else 
         calc.input.value = eval(calc.input.value); 
 
-    logOperation += "=" + calc.input.value + '\n';
+    logOperation += " = " + calc.input.value + '\n';
 AddElementToHistory("arhiv", logOperation);
 }
 
