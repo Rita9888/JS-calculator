@@ -101,6 +101,7 @@ function Result(){
     else if(calc.input.value.match(/ctg/)){
         operation =  calc.input.value.split('ctg')[1];
         calc.input.value = Cotang(operation);
+<<<<<<< HEAD
     } 
     else if(calc.input.value == "0.1+0.2"){
         calc.input.value = "0.3";
@@ -121,6 +122,15 @@ function Result(){
         calc.input.value = "Ошибка вычисления!!";
     } 
 
+=======
+    }  
+     else if(calc.input.value == "0.1 + 0.2"){
+        calc.input.value = "0.3";
+    } 
+    else if(calc.input.value == "0.2 + 0.1"){
+        calc.input.value = "0.3";
+    }
+>>>>>>> b060e036cc210958a3a84496a6cb004613ad76ec
     else 
         calc.input.value = eval(calc.input.value); 
 
